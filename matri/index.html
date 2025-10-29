@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrimonial Biodata Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <form id="biodataForm" novalidate>
+            <h1>Matrimonial Biodata</h1>
+
+            <fieldset>
+                <legend>Personal Details</legend>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <span class="error-message" id="fullNameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">--Select--</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-message" id="genderError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                    <span class="error-message" id="dobError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="religion">Religion:</label>
+                    <input type="text" id="religion" name="religion" placeholder="e.g., Islam, Hinduism, Christianity">
+                    <span class="error-message" id="religionError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="maritalStatus">Marital Status:</label>
+                    <select id="maritalStatus" name="maritalStatus" required>
+                        <option value="">--Select--</option>
+                        <option value="never_married">Never Married</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="widowed">Widowed</option>
+                    </select>
+                    <span class="error-message" id="maritalStatusError"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact & Physical Details</legend>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., 017..." required>
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Current Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                    <span class="error-message" id="addressError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="height">Height (in cm):</label>
+                    <input type="number" id="height" name="height" placeholder="e.g., 170" required>
+                    <span class="error-message" id="heightError"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education & Career</legend>
+                
+                <div class="form-group">
+                    <label for="education">Highest Education:</label>
+                    <input type="text" id="education" name="education" placeholder="e.g., B.Sc. in CSE" required>
+                    <span class="error-message" id="educationError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="occupation">Occupation:</label>
+                    <input type="text" id="occupation" name="occupation" placeholder="e.g., Software Engineer" required>
+                    <span class="error-message" id="occupationError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="income">Annual Income (Optional):</label>
+                    <input type="number" id="income" name="income" placeholder="e.g., 1200000">
+                    <span class="error-message" id="incomeError"></span>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Family Details</legend>
+
+                <div class="form-group">
+                    <label for="fatherName">Father's Name:</label>
+                    <input type="text" id="fatherName" name="fatherName" required>
+                    <span class="error-message" id="fatherNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="motherName">Mother's Name:</label>
+                    <input type="text" id="motherName" name="motherName" required>
+                    <span class="error-message" id="motherNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="siblings">Siblings:</label>
+                    <input type="text" id="siblings" name="siblings" placeholder="e.g., 1 brother, 2 sisters">
+                    <span class="error-message" id="siblingsError"></span>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Photo</legend>
+                <div class="form-group">
+                    <label for="photo">Upload Your Photo:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                    <span class="error-message" id="photoError"></span>
+                </div>
+            </fieldset>
+
+            <button type="submit">Submit Biodata</button>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
